@@ -7,7 +7,7 @@ import com.koindidemo.ex1.data.UserRepository
 import com.koindidemo.ex1.data.UserRepositoryImpl
 import org.koin.dsl.module
 
-val appModule = module{
+val appModule1 = module{
     single<UserRepository> { UserRepositoryImpl() }
     factory { UserPresenter(get()) }
     factory { UserViewModel(get(),get()) }
